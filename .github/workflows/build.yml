@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn test

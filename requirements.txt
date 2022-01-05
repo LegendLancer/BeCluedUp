@@ -1,0 +1,8 @@
+Already have a React App in place being built, what I need is the following functionality:
+
+- Customer Signup (Google Firebase)
+- Add Product to Cart
+- Cart Page showing products
+- Discount Code option
+- Order (using Stripe & Firebase)
+- Order Confirmation

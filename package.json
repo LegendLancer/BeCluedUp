@@ -1,0 +1,50 @@
+{
+  "name": "be-clued-up",
+  "version": "0.1.0",
+  "private": true,
+  "main": "out/index.html",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "test": "echo no tests to run",
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "prettier-fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "9.3.2",
+    "next-seo": "^4.26.0",
+    "react": "16.13.1",
+    "react-countup": "^4.3.3",
+    "react-dom": "16.13.1",
+    "react-id-swiper": "^3.0.0",
+    "react-visibility-sensor": "^5.1.1",
+    "swiper": "^5.3.6"
+  },
+  "devDependencies": {
+    "url-loader": "^4.0.0",
+    "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{md,mdx,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
